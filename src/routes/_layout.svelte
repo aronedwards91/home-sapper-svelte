@@ -33,7 +33,7 @@
         {utils.firstLetterUpper(segment === undefined ? "Home" : segment)}
       </h1>
     </div>
-    <div class="bg-blur">
+    <div class="bg-blur pagemain">
       <div class="bg-whitesoft mainwrap"><slot /></div>
     </div>
   </main>
@@ -41,7 +41,7 @@
 
 <style>
   .background {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     z-index: -100;
@@ -83,6 +83,9 @@
   }
   .title h1 {
     margin-bottom: 0;
+  }
+  .pagemain {
+    margin-bottom: 4em;
   }
   .mainwrap {
     min-width: 600px;

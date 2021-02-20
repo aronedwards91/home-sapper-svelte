@@ -8,9 +8,9 @@
       <div />
       <a href=".">home</a>
     </li>
-    <li aria-current={segment === "about" ? "page" : undefined}>
+    <li aria-current={segment === "career" ? "page" : undefined}>
       <div />
-      <a href="about">career</a>
+      <a href="career">career</a>
     </li>
     <li aria-current={segment === "projects" ? "page" : undefined}>
       <div />
