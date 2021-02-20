@@ -12,6 +12,10 @@
       <div />
       <a href="about">career</a>
     </li>
+    <li aria-current={segment === "projects" ? "page" : undefined}>
+      <div />
+      <a href="projects">projects</a>
+    </li>
     <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
     <li aria-current={segment === "blog" ? "page" : undefined}>
@@ -30,7 +34,7 @@
 
   ul {
     margin: 0;
-    padding: 0;
+    padding: 0.4em 0;
     display: flex;
     flex-direction: column;
   }
