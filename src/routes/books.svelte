@@ -3,7 +3,7 @@
   import { NonFictionBooks } from "../data//books";
 </script>
 
-<h2>Heavily Recommended Reading</h2>
+<h2>Strongly Recommended Reading</h2>
 
 <h4 class="mb">For some books I have added personal notes</h4>
 

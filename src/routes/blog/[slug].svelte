@@ -26,6 +26,10 @@
 		so we have to use the :global(...) modifier to target
 		all elements inside .content
 	*/
+
+	main {
+		text-align: left;
+	}
 	.content :global(h2) {
 		font-size: 1.4em;
 		font-weight: 500;
@@ -59,6 +63,6 @@
 
 <h1>{post.title}</h1>
 
-<div class="content">
+<main class="content">
 	{@html post.html}
-</div>
+</main>
