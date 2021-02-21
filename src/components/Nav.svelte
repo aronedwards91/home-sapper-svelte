@@ -54,6 +54,7 @@
     display: block;
     float: left;
     position: relative;
+    transition: background 0.3s ease-in-out;
   }
   li:hover {
     background: rgba(184, 210, 250, 0.5);
