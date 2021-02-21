@@ -2,8 +2,8 @@
   export let segment;
 </script>
 
-<nav class="bg-blur">
-  <ul class="bg-whitesoft">
+<nav class="bg-blur-desk">
+  <ul class="bg-whitesoft-desk">
     <li aria-current={segment === undefined ? "page" : undefined}>
       <div />
       <a href=".">home</a>
@@ -33,16 +33,18 @@
   nav {
     font-weight: 300;
     margin: auto;
-    width: 200px;
+    padding: 0 1em;
   }
 
   ul {
     margin: 0;
     padding: 0.4em 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -5px;
   }
-
   /* clearfix */
   ul::after {
     content: "";
@@ -55,26 +57,56 @@
     float: left;
     position: relative;
     transition: background 0.3s ease-in-out;
+    margin: 5px;
+    background: rgba(184, 210, 250, 0.4);
   }
   li:hover {
     background: rgba(184, 210, 250, 0.5);
   }
-  li div {
-    width: 0.5em;
-    position: absolute;
-    left: 0;
-    height: 100%;
-  }
-
-  [aria-current] div {
-    background: rgb(126 163 220 / 80%);
-  }
 
   a {
     text-decoration: none;
-    font-size: 19px;
+    font-size: 18px;
     color: black;
-    padding: 0.4em 1em;
+    padding: 0.2em 0.5em;
     display: block;
+  }
+  [aria-current] {
+    border: 1px solid rgba(153, 182, 224, 0.7);
+  }
+
+  @media (min-width: 800px) {
+    nav {
+      font-weight: 300;
+      margin: auto;
+      width: 200px;
+      padding: 0;
+    }
+    ul {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    li {
+      margin: 0;
+      background: none;
+    }
+    li div {
+      width: 0.5em;
+      position: absolute;
+      left: 0;
+      height: 100%;
+    }
+
+    [aria-current] div {
+      background: rgb(126 163 220 / 80%);
+    }
+    [aria-current] {
+      border: none;
+    }
+    a {
+      font-size: 19px;
+      padding: 0.4em 1em;
+    }
   }
 </style>

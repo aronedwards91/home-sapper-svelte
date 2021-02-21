@@ -39,6 +39,13 @@
     line-height: 1.5;
     list-style: none;
     text-align: left;
+    padding-inline-start: 0;
+  }
+  @media only screen and (min-width: 800px) {
+    ul {
+      list-style: none;
+      padding-inline-start: 2em;
+    }
   }
   li {
     margin-bottom: 1em;
@@ -53,6 +60,6 @@
     display: block;
   }
   p {
-	  margin-bottom: 0;
+    margin-bottom: 0;
   }
 </style>

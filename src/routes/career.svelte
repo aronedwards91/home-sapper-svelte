@@ -35,18 +35,29 @@
 <style>
   ul {
     list-style: none;
+    padding-inline-start: 0;
   }
   li.flex {
     display: flex;
     margin-bottom: 2em;
   }
   img.icon {
-    text-align: center;
-    width: 80px;
-    height: 80px;
-    margin-top: 1em;
-    margin-right: 1em;
-    border-radius: 50%;
-    object-fit: cover;
+    display: none;
+  }
+  @media only screen and (min-width: 600px) {
+    ul {
+      list-style: none;
+      padding-inline-start: 2em;
+    }
+    img.icon {
+      display: block;
+      text-align: center;
+      width: 80px;
+      height: 80px;
+      margin-top: 1em;
+      margin-right: 1em;
+      border-radius: 50%;
+      object-fit: cover;
+    }
   }
 </style>

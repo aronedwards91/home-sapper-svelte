@@ -36,7 +36,6 @@
 
 <style>
   div.item {
-    width: 300px;
     margin-bottom: 1em;
     background: rgba(184, 210, 250, 0.5);
   }
@@ -48,7 +47,16 @@
     height: 100%;
     padding: 0.5em 1em;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     display: block;
+  }
+  @media (min-width: 800px) {
+    div.item {
+      width: 300px;
+      margin-bottom: 0.5em;
+    }
+  div.item a {
+    font-size: 20px;
+  }
   }
 </style>

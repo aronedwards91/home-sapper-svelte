@@ -56,21 +56,39 @@
     display: flex;
     flex-direction: column;
   }
+  header {
+    flex: 0 0 100%;
+    padding-top: 30px;
+    margin-bottom: 2em;
+  }
+  .mainwrap {
+    min-width: 240px;
+    padding: 1em;
+  }
+  main {
+    padding: 0 1em;
+    width: 100vw;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+  }
   @media only screen and (min-width: 800px) {
     .siteroot {
       flex-direction: row;
     }
-  }
-  header {
-    flex: 0 1 300px;
-    padding-top: 60px;
-  }
-  main {
-    position: relative;
-    margin: 0 auto;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 0 5em;
+    header {
+      flex: 0 1 300px;
+      padding-top: 60px;
+    }
+    .mainwrap {
+      min-width: 600px;
+      max-width: 1000px;
+      padding: 4em;
+    }
+    main {
+      padding: 0 5em;
+    }
   }
   .title {
     max-width: 56em;
@@ -86,10 +104,5 @@
   }
   .pagemain {
     margin-bottom: 4em;
-  }
-  .mainwrap {
-    min-width: 600px;
-    max-width: 1000px;
-    padding: 4em;
   }
 </style>

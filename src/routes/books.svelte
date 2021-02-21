@@ -28,6 +28,7 @@
   }
   ul {
     list-style: none;
+    padding-inline-start: 0;
   }
   li {
     border-bottom: 3px solid rgba(134, 159, 196, 0.7);

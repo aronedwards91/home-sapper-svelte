@@ -52,6 +52,7 @@
     cursor: pointer;
     width: 3em;
     height: 3em;
+    flex: 0 0 3em;
     padding: 0.4em 0;
     border: none;
     background: rgba(134, 159, 196, 0.7);

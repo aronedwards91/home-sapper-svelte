@@ -28,5 +28,12 @@
 <style>
   ul {
     list-style: none;
+    padding-inline-start: 0;
+  }
+  @media only screen and (min-width: 800px) {
+    ul {
+      list-style: none;
+      padding-inline-start: 2em;
+    }
   }
 </style>
