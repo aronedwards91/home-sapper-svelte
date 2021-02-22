@@ -12,8 +12,8 @@ description: "A Little how & why, on crafting Single File React Apps"
 - [Why](#why)
 - [How](#how)
 - [Setup](#setup)
-- [Form Construction](#Form-Construction)
-- [Summary](#Summary)
+- [Form Construction](#form-setup)
+- [Summary](#summary)
 
 ## Introduction
 
