@@ -1,24 +1,46 @@
 <script context="module">
-	export async function preload({ params }) {
-		// the `slug` parameter is available because
-		// this file is called [slug].svelte
-		const res = await this.fetch(`blog/${params.slug}.json`);
-		const data = await res.json();
+  import FixAnchor from "../../components/FixAnchor.svelte";
+  export async function preload({ params }) {
+    // the `slug` parameter is available because
+    // this file is called [slug].svelte
+    const res = await this.fetch(`blog/${params.slug}.json`);
+    const data = await res.json();
 
-		if (res.status === 200) {
-			return { post: data };
-		} else {
-			this.error(res.status, data.message);
-		}
-	}
+    if (res.status === 200) {
+      return { post: data };
+    } else {
+      this.error(res.status, data.message);
+    }
+  }
 </script>
 
 <script>
-	export let post;
+  export let post;
 </script>
 
+<svelte:head>
+  <title>{post.title}</title>
+</svelte:head>
+
+<FixAnchor />
+
+{#if post.bannerImg}
+  <div class="bannerwrap">
+    <img src={post.bannerImg} alt="banner" />
+    <div class="titlewrap">
+      <h1 style="color:{post.bannerTitleCol}">{post.title}</h1>
+    </div>
+  </div>
+{:else}
+  <h1>{post.title}</h1>
+{/if}
+
+<main class="content">
+  {@html post.html}
+</main>
+
 <style>
-	/*
+  /*
 		By default, CSS is locally scoped to the component,
 		and any unused styles are dead-code-eliminated.
 		In this page, Svelte can't know which elements are
@@ -27,42 +49,60 @@
 		all elements inside .content
 	*/
 
-	main {
-		text-align: left;
-	}
-	.content :global(h2) {
-		font-size: 1.4em;
-		font-weight: 500;
-	}
+  main {
+    text-align: left;
+  }
+  .bannerwrap {
+    width: 100%;
+    position: relative;
+  }
+  .bannerwrap img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2em;
+  }
+  .bannerwrap .titlewrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bannerwrap h1 {
+    font-size: 2em;
+  }
+  @media only screen and (min-width: 800px) {
+    .bannerwrap h1 {
+      font-size: 3em;
+    }
+  }
+  .content :global(h2) {
+    font-size: 1.4em;
+    font-weight: 500;
+  }
 
-	.content :global(pre) {
-		background-color: #f9f9f9;
-		box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
-		padding: 0.5em;
-		border-radius: 2px;
-		overflow-x: auto;
-	}
+  .content :global(pre) {
+    background-color: #f9f9f9;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
+    padding: 0.5em;
+    border-radius: 2px;
+    overflow-x: auto;
+  }
 
-	.content :global(pre) :global(code) {
-		background-color: transparent;
-		padding: 0;
-	}
+  .content :global(pre) :global(code) {
+    background-color: transparent;
+    padding: 0;
+  }
 
-	.content :global(ul) {
-		line-height: 1.5;
-	}
+  .content :global(ul) {
+    line-height: 1.5;
+  }
 
-	.content :global(li) {
-		margin: 0 0 0.5em 0;
-	}
+  .content :global(li) {
+    margin: 0 0 0.5em 0;
+  }
 </style>
-
-<svelte:head>
-	<title>{post.title}</title>
-</svelte:head>
-
-<h1>{post.title}</h1>
-
-<main class="content">
-	{@html post.html}
-</main>
