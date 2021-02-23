@@ -1,6 +1,10 @@
 <script>
 </script>
 
+<svelte:head>
+  <meta name="Description" content="Personal Home page for me, Aron">
+</svelte:head>
+
 <h2>Welcome</h2>
 
 <div class="text-align-left">
@@ -10,16 +14,14 @@
     I'm a keen website developer, though having only been developing for the
     past few years, after moving from the support end. To keep myself fresh and
     explore the frankly ridiculous number of frameworks available I've been
-    rebuilding my website every year. thankfully my design skills and are also
-    improving which you'll notice by this site being considerbly less ugly than
-    past attempts.
+    rebuilding my website every year. This one was built with svelte/sapper, and the results have been great.
   </p>
 
   <p>
     This site mostly houses a short work history and some of the projects I've
-    been playing around with since starting web development, please reach out
+    been playing around with since starting web development & programming, please reach out
     with any comments or advice as it's always welcome. Anyway, thanks for
-    readying this far, all the best,
+    reading this far, all the best,
   </p>
   <p>Aron</p>
   <div class="item">
