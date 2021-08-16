@@ -2,8 +2,8 @@ export const ExperienceList = [
   {
     title: "Asset TV",
     sub: "May19 - Current",
+    icon: 'images/career/ExperienceTDG.png',
     text: `Here at Asset TV, I’ve built on a react web app, building a react native app and worked on general site improvements. I’ve found the heavy focus on front end a nice challenge, and it’s really helped me get to grips with application design and software structuring, thanks in large part to some well experience colleagues. The work on the app used React native and it’s been great being able to throw my web app skills into developing mobile ready applications. There’s still sufficient jank around the whole process, but it felt pretty effective once I got to grips with some of the oddities of each OS (though I did gain a strong dislike of XCode).\nBefore I had been more interested in a more fullstack focus, but given the chance to really nail down front end has made me appreciate the advantages of building a more narrow skillset.`,
-    icon: 'images/career/ExperienceAtos.png',
   },
   {
     title: "BAE",
