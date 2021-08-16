@@ -1,4 +1,5 @@
 export default {
-  maxWidthMob: 799,
-  minWidthTabDesk: 800,
+  maxWidthMob: 599,
+  minWidthTablet: 600,
+  minWidthDesktop: 1100,
 };

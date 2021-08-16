@@ -5,41 +5,14 @@
   export let segment;
 
   var mobMaxWidth = "(max-width: " + resp.maxWidthMob + ")";
-  var deskMinWidth = "(min-width: " + resp.minWidthTabDesk + ")";
+  var deskMinWidth = "(min-width: " + resp.minWidthTablet + ")";
 </script>
 
-<svelte:head>
-  <title>Aron{segment === undefined ? "" : " | " + segment}</title>
-</svelte:head>
-
-<div class="background">
-  <picture>
-    <source
-      media={mobMaxWidth}
-      srcset="Mountain_view_in_Robson_valley_mob.webp"
-    />
-    <source media={deskMinWidth} srcset="Mountain_view_in_Robson_valley.webp" />
-    <img src="Mountain_view_in_Robson_valley.webp" alt="background" />
-  </picture>
-</div>
-
-<div class="siteroot">
-  <header>
-    <Nav {segment} />
-  </header>
-  <main>
-    <div class="title">
-      <h1>
-        {utils.firstLetterUpper(segment === undefined ? "Home" : segment)}
-      </h1>
-    </div>
-    <div class="bg-blur pagemain">
-      <div class="bg-whitesoft mainwrap"><slot /></div>
-    </div>
-  </main>
-</div>
-
 <style>
+  :global(:root) {
+    --desktop-min: 1100px;
+    --tablet-min: 600px;
+  }
   .background {
     position: fixed;
     height: 100%;
@@ -73,7 +46,7 @@
     text-align: center;
     margin: 0 auto;
   }
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 1100px) {
     .siteroot {
       flex-direction: row;
     }
@@ -82,12 +55,14 @@
       padding-top: 60px;
     }
     .mainwrap {
-      min-width: 600px;
+      min-width: 400px;
       max-width: 1000px;
       padding: 4em;
+      margin: 0 auto;
     }
     main {
       padding: 0 5em;
+      width: calc(100vw - 300px);
     }
   }
   .title {
@@ -106,3 +81,35 @@
     margin-bottom: 4em;
   }
 </style>
+
+<svelte:head>
+  <title>Aron{segment === undefined ? '' : ' | ' + segment}</title>
+</svelte:head>
+
+<div class="background">
+  <picture>
+    <source
+      media={mobMaxWidth}
+      srcset="Mountain_view_in_Robson_valley_mob.webp" />
+    <source media={deskMinWidth} srcset="Mountain_view_in_Robson_valley.webp" />
+    <img src="Mountain_view_in_Robson_valley.webp" alt="background" />
+  </picture>
+</div>
+
+<div class="siteroot" style="--minTab: {resp.minWidthTablet}px">
+  <header>
+    <Nav {segment} />
+  </header>
+  <main>
+    <div class="title">
+      <h1>
+        {utils.firstLetterUpper(segment === undefined ? 'Home' : segment)}
+      </h1>
+    </div>
+    <div class="bg-blur pagemain">
+      <div class="bg-whitesoft mainwrap">
+        <slot />
+      </div>
+    </div>
+  </main>
+</div>

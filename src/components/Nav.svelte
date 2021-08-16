@@ -51,7 +51,7 @@
     border: 1px solid rgba(153, 182, 224, 0.7);
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 1100px) {
     nav {
       font-weight: 300;
       margin: auto;
