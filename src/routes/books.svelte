@@ -1,6 +1,6 @@
 <script>
   import BookNote from "../components/BookNote.svelte";
-  import { NonFictionBooks } from "../data//books";
+  import { NonFictionBooks } from "../data/books";
 </script>
 
 <h2>Strongly Recommended Reading</h2>

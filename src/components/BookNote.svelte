@@ -1,13 +1,17 @@
 <script>
   export let book;
 
-  var notesOpen = false;
+  let notesText = "Notes:";
+  if(book.notesText) {
+    notesText = book.notesText;
+  }
+  let notesOpen = false;
   function notesClick() {
     console.log("2");
     notesOpen = !notesOpen;
   }
 
-  var subNotesOpen = [];
+  let subNotesOpen = [];
   book.notes.forEach(() => {
     subNotesOpen.push(false);
   });
@@ -18,7 +22,7 @@
 </script>
 
 <div class="flex">
-  <h5>Notes:</h5>
+  <h5>{notesText}</h5>
   <button on:click={notesClick} class={notesOpen && "button-open"}>V</button>
 </div>
 <div class="{notesOpen ? 'note-drawer-open' : 'note-drawer-closed'} inner">
@@ -27,8 +31,7 @@
       <h5>{note.title}</h5>
       <button
         on:click={() => notesDrawerClick(index)}
-        class={subNotesOpen[index] && "button-open"}>V</button
-      >
+        class={subNotesOpen[index] && "button-open"}>V</button>
     </div>
     <div
       class="{subNotesOpen[index] ? 'note-drawer-open' : 'note-drawer-closed'} "
@@ -56,7 +59,7 @@
     padding: 0.4em 0;
     border: none;
     background: rgba(134, 159, 196, 0.7);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.2s ease-in-out;
   }
   button:hover {
     background: rgba(134, 159, 196, 0.9);

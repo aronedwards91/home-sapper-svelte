@@ -245,12 +245,6 @@ export const NonFictionBooks = [
       ],
     },
     {
-      title: "The Deluge",
-      sub: "Adam Tooze",
-      text: `A hefty review of the legacy of WWI`,
-      moreText: "A book that may well require two reads, but gives a powerful and in depth look into the factors that made the first world war set the stage for the second."
-    },
-    {
       title: "A History of Britain and the British People",
       sub: "Arthur Bryant",
       text: `A immersive and powerful history full of strange and dangerous moments, written with a engrossing flair for the dramatic.`
