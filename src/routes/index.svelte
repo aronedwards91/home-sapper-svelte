@@ -2,28 +2,27 @@
 </script>
 
 <svelte:head>
-  <meta name="Description" content="Personal Home page for me, Aron">
+  <meta name="Description" content="Personal Home page for me, Aron" />
 </svelte:head>
 
 <h2>Welcome</h2>
 
 <div class="text-align-left">
-  <p>Welcome to my homepage, thanks for stopping by.</p>
-
   <p>
-    I'm a keen website developer, though having only been developing for the
-    past few years, after moving from the support end. To keep myself fresh and
-    explore the frankly ridiculous number of frameworks available I've been
-    rebuilding my website every year. This one was built with svelte/sapper, and the results have been great.
+    Welcome 👋, to the homepage for me, Aron Edwards, a frontend web developer,
+    I've been loving my career path in software since I started and am slowly
+    honing my skills with a number of personal <a href="/projects"
+      >side projects</a
+    >. I'm mostly focusing on React, howver I'm bullish on svelte and hopeful it
+    sees more enterprise adoption, as I've immensely enjoyed using with it.
   </p>
 
   <p>
-    This site mostly houses a short work history and some of the projects I've
-    been playing around with since starting web development & programming, please reach out
-    with any comments or advice as it's always welcome. Anyway, thanks for
-    reading this far, all the best,
+    Currently gainfully empolyed with Lucera (@ BGC Cantor) in the Fintec space,
+    though I am looking to build connections with Web developers in the
+    Hertfordshire area to help out in commnunity projects.
   </p>
-  <p>Aron</p>
+  <p>Aron Edwards</p>
   <div class="item">
     <a href="https://www.linkedin.com/in/aronedwards/" target="_target"
       >linkedin.com/in/aronedwards/</a
@@ -57,8 +56,8 @@
       width: 300px;
       margin-bottom: 0.5em;
     }
-  div.item a {
-    font-size: 20px;
-  }
+    div.item a {
+      font-size: 20px;
+    }
   }
 </style>

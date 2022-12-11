@@ -1,5 +1,5 @@
 <script>
-  import { ExperienceList, GeneralExperience } from "../data/career";
+  import { ExperienceList } from "../data/career";
 </script>
 
 <h2>Software Career</h2>
@@ -18,19 +18,9 @@
 </ul>
 
 <h2>Prior Career</h2>
-
-<ul>
-  {#each GeneralExperience as item}
-    <li class="flex">
-      <img class="icon" src={item.icon} alt="company icon" />
-      <div class="text-align-left">
-        <h4>{item.title}</h4>
-        <h5>{item.sub}</h5>
-        <p>{item.text}</p>
-      </div>
-    </li>
-  {/each}
-</ul>
+<p>
+  Mostly in IT, but tried some odd jobs before I found where my skills best fit
+</p>
 
 <style>
   ul {
