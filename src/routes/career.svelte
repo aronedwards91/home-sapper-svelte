@@ -11,7 +11,7 @@
       <div class="text-align-left">
         <h4>{item.title}</h4>
         <h5>{item.sub}</h5>
-        <p>{item.text}</p>
+        <p style="white-space: break-spaces;">{item.text}</p>
       </div>
     </li>
   {/each}
